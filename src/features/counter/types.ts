@@ -1,12 +1,12 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from './actionTypes'
+import { CounterActionsEnum } from './actionTypes'
 
 interface IncrementCounterAction {
-  type: typeof INCREMENT_COUNTER
+  type: typeof CounterActionsEnum.INCREMENT_COUNTER
 }
-interface DecrementCounterAction {
-  type: typeof DECREMENT_COUNTER
+interface ResetCounterAction {
+  type: typeof CounterActionsEnum.RESET_COUNTER
 }
-export type CounterActionTypes = IncrementCounterAction | DecrementCounterAction
+export type CounterActionTypes = IncrementCounterAction | ResetCounterAction
 
 export interface SystemState {
   count: {

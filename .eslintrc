@@ -14,7 +14,7 @@
   },
   "rules": {
     // Make prettier code formatting suggestions more verbose.
-    "prettier/prettier": ["warn"],
+    "prettier/prettier": ["warn", {"endOfLine": "auto"}],
     // Disable <Fragment> => <> replacement. Feel free to change
     "react/jsx-fragments": "off",
     // Disable prefer default export

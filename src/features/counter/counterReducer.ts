@@ -1,4 +1,4 @@
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from './actionTypes'
+import { CounterActionsEnum } from './actionTypes'
 import { CounterActionTypes } from './types'
 
 const initialState = {
@@ -7,10 +7,10 @@ const initialState = {
 
 export default (state = initialState, action: CounterActionTypes) => {
   switch (action.type) {
-    case INCREMENT_COUNTER:
+    case CounterActionsEnum.INCREMENT_COUNTER:
       return { ...state, value: state.value + 1 }
-    case DECREMENT_COUNTER:
-      return { ...state, value: state.value - 1 }
+    case CounterActionsEnum.RESET_COUNTER:
+      return { ...state, value: 0 }
     default:
       return state
   }

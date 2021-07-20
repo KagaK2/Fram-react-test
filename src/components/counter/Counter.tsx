@@ -16,29 +16,29 @@ const Counter: React.FC = () => {
               <h4>
                 Counter: <strong>{count}</strong>
               </h4>
-              <p>
-                Here you can increment and decrement counter value using buttons
-                below. All the state updates are performed via redux actions.
-              </p>
             </div>
             <div className="card-action">
               <div className="group">
                 <button
-                  className="waves-effect waves-teal btn-flat blue"
+                  className="waves-effect waves-teal btn-flat red"
                   type="button"
-                  data-qa="decrement-counter"
+                  data-qa="reset-counter"
                   onClick={() =>
-                    dispatch({ type: actionTypes.DECREMENT_COUNTER })
+                    dispatch({
+                      type: actionTypes.CounterActionsEnum.RESET_COUNTER,
+                    })
                   }
                 >
-                  decrement
+                  Reset
                 </button>
                 <button
-                  className="waves-effect waves-teal btn-flat red"
+                  className="waves-effect waves-teal btn-flat blue"
                   type="button"
                   data-qa="increment-counter"
                   onClick={() =>
-                    dispatch({ type: actionTypes.INCREMENT_COUNTER })
+                    dispatch({
+                      type: actionTypes.CounterActionsEnum.INCREMENT_COUNTER,
+                    })
                   }
                 >
                   increment
